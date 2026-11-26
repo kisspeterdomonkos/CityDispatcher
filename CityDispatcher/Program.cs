@@ -7,6 +7,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        Console.WriteLine("City:");
         City szeged = new City("Szeged", 160000);
 
         szeged.AddTransport(TransportType.Train);
@@ -22,5 +23,14 @@ internal class Program
 
         Console.WriteLine(szeged.HasTransport(TransportType.Train));
         Console.WriteLine(szeged.HasTransport(TransportType.Trolley));
+
+        Console.WriteLine("\nPosition:");
+        Position capitalPosition = new Position(0, 0);
+        Position cityPosition = new Position(10, -20);
+
+        Console.WriteLine(capitalPosition);
+        Console.WriteLine(cityPosition);
+
+        Console.WriteLine(capitalPosition == new Position(0, 0));
     }
 }
